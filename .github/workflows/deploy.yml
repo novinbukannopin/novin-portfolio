@@ -17,7 +17,7 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_KEY }}
           script: |
-            cd /var/www/docker-app
+            cd /var/www/portfolio-novin
             git pull origin main
             docker compose down
             docker compose up -d --build
