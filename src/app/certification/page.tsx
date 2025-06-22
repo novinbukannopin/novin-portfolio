@@ -22,14 +22,17 @@ export default async function BlogPage() {
       {posts.map((certif, id) => (
         <BlurFade delay={BLUR_FADE_DELAY * 2 + id * 0.05} key={certif.href}>
           <Link
-            className='mb-4 flex flex-col space-y-1'
-            href={`/blog/${certif.slug}`}
+            className='mb-4 flex space-y-1'
+            href={`/certification/${certif.slug}`}
           >
             <div className='flex w-full flex-col'>
               <p className='tracking-tight'>{certif.title}</p>
               <p className='h-6 text-xs text-muted-foreground'>
                 {certif.subtitle}
               </p>
+            </div>
+            <div>
+              <p className='text-xs text-muted-foreground'>{certif.start}</p>
             </div>
           </Link>
         </BlurFade>

@@ -1,4 +1,5 @@
 import { Icons } from '@/components/icons';
+import config from '@/lib/config';
 import { HomeIcon, NotebookIcon, ScrollText } from 'lucide-react';
 
 export const DATA = {
@@ -153,30 +154,39 @@ export const DATA = {
   ],
   certifications: [
     {
-      title: 'Certified Software Quality Assurance (CSQA)',
-      subtitle: 'International Software Testing Qualifications Board (ISTQB)',
-      slug: 'certified-software-quality-assurance',
-      href: 'https://www.istqb.org/certification-path-root/certified',
-      logoUrl: '/istqb.png',
+      title: 'Certified System Analyst',
+      subtitle: 'Badan Nasional Sertifikasi Profesi (BNSP)',
+      slug: 'certified-system-analyst',
+      href: config.apiUrl + '/certification',
+      logoUrl: '/bnsp.png',
       start: '2024',
-      end: '2025',
+      end: '2027',
     },
     {
-      title: 'Certified Software Tester (CSTE)',
-      subtitle: 'International Institute for Software Testing (IIST)',
-      slug: 'certified-software-tester',
-      href: 'https://www.softwarecertifications.org/cste-certification',
-      logoUrl: '/iist.png',
+      title: 'Certified Junior Programming',
+      subtitle: 'Badan Nasional Sertifikasi Profesi (BNSP)',
+      slug: 'certified-junior-programming',
+      href: config.apiUrl + '/certification',
+      logoUrl: '/bnsp.png',
       start: '2024',
-      end: '2025',
+      end: '2027',
     },
     {
-      title: 'Certified Agile Tester (CAT)',
-      subtitle: 'International Software Testing Qualifications Board (ISTQB)',
-      slug: 'certified-agile-tester',
-      href: 'https://www.istqb.org/certification-path-root/certified-agile-tester-cat.html',
-      logoUrl: '/istqb.png',
+      title: 'Certified Operator Komputer Muda',
+      subtitle: 'Badan Nasional Sertifikasi Profesi (BNSP)',
+      slug: 'certified-operator-komputer-muda',
+      href: config.apiUrl + '/certification',
+      logoUrl: '/bnsp.png',
       start: '2024',
+      end: '2027',
+    },
+    {
+      title: 'IT Support Google Specialization',
+      subtitle: 'Coursera Career Certificates',
+      slug: 'it-support-google-specialization',
+      href: config.apiUrl + '/certification',
+      logoUrl: '/coursera.png',
+      start: '2022',
       end: '2025',
     },
   ],
