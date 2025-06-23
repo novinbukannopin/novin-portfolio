@@ -12,7 +12,7 @@ export const DATA = {
     'Full-stack thinker, systems builder, and agile team driver. I turn ideas into scalable products with code, process, and people.',
   summary:
     'Ambitious professional blending strategic leadership and technical depth across Solution Architecture, Systems Analysis, Project Management, and Product Management. Proven ability to guide cross-functional teams—FE, BE, QA, UI/UX, Data Engineering, and Technical Writing—through agile ceremonies, roadmap planning, backlog prioritization, and milestone tracking to deliver scalable, high-quality solutions on schedule. Skilled in business process analysis, PRD/SRS/ERD/UML development, full-stack coding (Node.js, React.js, SQL/ETL), and QA automation (Cypress, K6), driving projects from concept to production.',
-  avatarUrl: '/me.png',
+  avatarUrl: '/me.webp',
   skills: [
     'Product Documentation',
     'UML & Diagramming',
@@ -69,7 +69,7 @@ export const DATA = {
       href: 'https://www.finpay.id/',
       location: 'Jakarta',
       title: 'Solution Architect',
-      logoUrl: '/finnet.png',
+      logoUrl: '/finnet.webp',
       start: 'Apr 25',
       end: 'Present',
       description:
@@ -81,7 +81,7 @@ export const DATA = {
       location: 'Surabaya',
       title: 'System Analyst & Quality Assurance',
       start: 'Apr 24',
-      logoUrl: '/solid.png',
+      logoUrl: '/solid.webp',
       end: 'Apr 25',
       description:
         'Developed PRD, SRS, ERD diagrams, and managed project timelines through client meetings. Conducted manual and automated testing using Cypress to ensure software quality. Led performance testing with K6, optimizing system reliability. Coordinated with cross-functional teams for seamless integration and project success.',
@@ -92,7 +92,7 @@ export const DATA = {
       title: 'Web Developer Intern',
       href: 'https://solomonindoglobal.com/',
       start: 'Jan 24',
-      logoUrl: '/solid.png',
+      logoUrl: '/solid.webp',
       end: 'Apr 24',
       description:
         'Built and maintained web applications using Node.js and React.js. Integrated front-end elements with backend logic alongside designers and developers. Fixed bugs and optimized performance for better user experience.',
@@ -104,7 +104,7 @@ export const DATA = {
       href: 'https://www.rakamin.com/',
       start: 'Nov 23',
       end: 'Jan 24',
-      logoUrl: '/rakamin.png',
+      logoUrl: '/rakamin.webp',
       description:
         'Managed and coordinated Zoom sessions for product development training with Bank Mandiri. Recorded attendance, facilitated Q&A sessions, and ensured active participation. Sent timely reminders and updates to participants. Achieved a participant satisfaction score of 93.88%.',
     },
@@ -115,7 +115,7 @@ export const DATA = {
       href: 'https://www.rakamin.com/',
       start: 'Sep 23',
       end: 'Nov 23',
-      logoUrl: '/rakamin.png',
+      logoUrl: '/rakamin.webp',
       description:
         'Opened and closed Zoom sessions for SQA classes, ensuring smooth operation. Took attendance and effectively handled Q&A sessions. Sent reminders about upcoming classes and assignments. Achieved a participant satisfaction score of 90.15%.',
     },
@@ -125,7 +125,7 @@ export const DATA = {
       title: 'Data Engineer Intern (Project Based)',
       start: 'Aug 23',
       end: 'Sep 23',
-      logoUrl: '/idx.png',
+      logoUrl: '/idx.webp',
       href: 'https://idxpartners.com/',
       description:
         'Assisted in writing and optimizing complex SQL queries to enhance database performance. Helped extract data from multiple databases for reporting and analysis. Supported routine maintenance tasks including indexing and partitioning.',
@@ -137,7 +137,7 @@ export const DATA = {
       start: 'Jul 23',
       end: 'Aug 23',
       href: 'https://kalbenutritionals.com/en',
-      logoUrl: '/kalbe.png',
+      logoUrl: '/kalbe.webp',
       description:
         'Assisted in creating and maintaining data pipelines to ensure accurate data flow. Helped integrate data from various sources into the data warehouse using ETL methods.',
     },
@@ -147,7 +147,7 @@ export const DATA = {
       school: 'UIN Sunan Ampel Surabaya',
       href: 'https://uinsa.ac.id/',
       degree: "Bachelor's Degree of Information System",
-      logoUrl: '/uinsa.png',
+      logoUrl: '/uinsa.webp',
       start: '2021',
       end: '2025',
     },
@@ -158,8 +158,8 @@ export const DATA = {
       subtitle: 'Badan Nasional Sertifikasi Profesi (BNSP)',
       slug: 'certified-system-analyst',
       href: config.apiUrl + '/certification',
-      logoUrl: '/bnsp.png',
-      image: ['system-analyst-1.jpg'],
+      logoUrl: '/bnsp.webp',
+      image: ['system-analyst-1.webp'],
       skills: [
         'UML',
         'Github',
@@ -176,8 +176,8 @@ export const DATA = {
       subtitle: 'Badan Nasional Sertifikasi Profesi (BNSP)',
       slug: 'certified-junior-programming',
       href: config.apiUrl + '/certification',
-      logoUrl: '/bnsp.png',
-      image: ['junior-programming-1.jpg', 'junior-programming-2.jpg'],
+      logoUrl: '/bnsp.webp',
+      image: ['junior-programming-1.webp', 'junior-programming-2.webp'],
       competencies: [
         'Menerapkan Metode dan Praktik Penggunaan Kembali (Reusable) Subrutin-Subrutin',
         'Mengimplementasikan Pemrograman Terstruktur',
@@ -195,8 +195,8 @@ export const DATA = {
       subtitle: 'Badan Nasional Sertifikasi Profesi (BNSP)',
       slug: 'certified-operator-komputer-muda',
       href: config.apiUrl + '/certification',
-      logoUrl: '/bnsp.png',
-      image: ['operator-komputer-muda-1.jpg', 'operator-komputer-muda-2.jpg'],
+      logoUrl: '/bnsp.webp',
+      image: ['operator-komputer-muda-1.webp', 'operator-komputer-muda-2.webp'],
       skills: ['Microsoft Word', 'Microsoft Excel', 'Microsoft PowerPoint'],
       competencies: [],
       start: '2024-01-01',
@@ -207,7 +207,7 @@ export const DATA = {
       subtitle: 'Coursera Career Certificates',
       slug: 'it-support-google-specialization',
       href: config.apiUrl + '/certification',
-      logoUrl: '/coursera.png',
+      logoUrl: '/coursera.webp',
       image: [],
       skills: [],
       competencies: [],
