@@ -10,6 +10,7 @@ export function ModeToggle() {
   return (
     <Button
       variant='ghost'
+      aria-label={`Button Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
       type='button'
       size='icon'
       className='px-2'

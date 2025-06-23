@@ -177,22 +177,28 @@ export default function Page() {
         <div className='grid w-full items-center justify-center gap-4 px-4 py-12 text-center md:px-6'>
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className='space-y-3'>
-              <div className='inline-block rounded-lg bg-foreground px-3 py-1 text-sm text-background'>
+              <div
+                className='inline-block rounded-lg bg-black px-3 py-1 text-sm text-white dark:bg-white dark:text-black'
+                aria-hidden='true'
+              >
                 Contact
               </div>
-              <h2 className='text-3xl font-bold tracking-tighter sm:text-5xl'>
+              <h2 className='text-3xl font-bold tracking-tight text-foreground sm:text-5xl'>
                 Get in Touch
               </h2>
-              <p className='mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'>
-                Want to chat? Just shoot me a dm{' '}
+              <p className='mx-auto max-w-[600px] text-base text-foreground/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'>
+                Want to chat? Just shoot me a DM{' '}
                 <Link
                   href={DATA.contact.social.LinkedIn.url}
-                  className='text-blue-500 hover:underline'
+                  className='font-medium underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2'
+                  aria-label='Message me on LinkedIn'
                 >
-                  with a direct question on Linkedin
+                  directly on LinkedIn
                 </Link>{' '}
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
+                and I’ll respond whenever I can.{' '}
+                <span className='font-semibold'>
+                  I will ignore all soliciting.
+                </span>
               </p>
             </div>
           </BlurFade>
