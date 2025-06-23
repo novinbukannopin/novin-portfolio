@@ -1,0 +1,65 @@
+---
+title: 'Apa Itu API? Bukan Cuma Buat Backend!'
+publishedAt: '2025-06-24'
+summary: 'Kenalan sama API dan cara kerja fetch data dari frontend.'
+---
+
+# Apa Itu API? Bukan Cuma Buat Backend!
+
+Kamu pasti sering denger istilah API pas ngoding. Tapi... sebenernya **apa sih API itu?**
+
+API (Application Programming Interface) itu kayak jembatan buat aplikasi saling ngobrol. Di dunia web, biasanya API ini berupa URL endpoint yang bisa diakses via HTTP — contohnya `GET /users` buat dapetin list user.
+
+> API itu penting banget biar frontend bisa dapet data dari server, dan sebaliknya.
+
+## Analogi Sederhana
+
+Bayangin lo ke restoran. Lo (frontend) pesen makanan lewat waiter (API), dan dapet makanan dari dapur (backend). Waiter gak masak, tapi jadi _perantara_ yang ngerti dua-duanya.
+
+## Contoh API di Frontend
+
+```js
+fetch('https://api.example.com/users')
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data)
+  })
+  .catch((err) => {
+    console.error('Gagal ambil data:', err)
+  })
+```
+
+Kode di atas akan request data dari backend, terus kita olah hasilnya pakai JavaScript.
+
+## Jenis-Jenis HTTP Method
+- GET — ambil data
+- POST — kirim data baru
+- PUT/PATCH — update data
+- DELETE — hapus data
+
+Biasanya API REST pakai struktur URL kayak gini:
+```txt
+GET https://api.example.com/users
+POST https://api.example.com/users
+```
+
+## Kenapa Lo Harus Ngerti API?
+- 🔄 Bikin web lo dinamis (gak cuma statis doang)
+- 🌍 Bisa ambil data dari service lain (misal: OpenWeather, YouTube, dll)
+- 💼 Bekal jadi fullstack dev
+
+## Tools Biar Makin Paham
+- Postman — buat testing API
+- JSON Viewer — buat lihat struktur data
+- Insomnia — alternatif Postman
+
+## Penutup
+
+Belajar API itu kayak belajar cara web saling ngobrol. Frontend tanpa API itu ibarat IG tanpa internet — tampilannya doang, tapi gak bisa apa-apa 😅
+Jadi, yuk latihan fetch data dari API publik. Kamu bisa mulai dari jsonplaceholder.typicode.com — gratis, aman, dan gak bisa errorin server orang 😂
+
+### Connect With Me:
+Instagram: [@novinbukannopin](https://instagram.com/novinbukannopin)
+LinkedIn: [novin](https://linkedin.com/in/novin-ardian-yulianto)
+
+---
