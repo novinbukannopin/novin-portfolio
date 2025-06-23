@@ -1,0 +1,58 @@
+---
+title: 'React Server Components (RSC) Itu Apa Sih? Yuk Bedah Bareng!'
+publishedAt: '2025-06-23'
+summary: 'Mengenal React Server Components (RSC) dan bagaimana cara kerjanya.'
+---
+
+# React Server Components (RSC) Itu Apa Sih?
+
+React Server Components (RSC) tuh fitur kece dari React yang ngasih kita power buat render komponen di server **tanpa kirim bundle ke client**.
+
+## Kenapa Harus Peduli?
+
+- No extra JS di client
+- Super cepat & SEO friendly
+- Bisa akses langsung ke database dari komponen
+
+## Contoh Kode
+```jsx
+import { getAllPosts } from '@/lib/db'
+
+export default async function PostsPage() {
+  const posts = await getAllPosts()
+
+  return (
+    <ul>
+      {posts.map((post) => (
+        <li key={post.id}>{post.title}</li>
+      ))}
+    </ul>
+  )
+}
+```
+
+⚠️ Komponen ini jalan di server. Jadi bisa akses DB secara langsung tanpa repot API fetch dari client.
+
+## Tapi... Gimana Cara Bedain Client dan Server?
+
+Gampang banget. Kalo lo mau bikin komponen yang jalan di client, tinggal kasih:
+
+```jsx
+'use client'
+```
+
+di baris paling atas file lo. Sisanya? Bakal dianggap sebagai server component secara default.
+
+## Penutup
+
+React Server Components ini beneran game-changer. Apalagi buat lo yang pengen:
+- Bikin web yang cepet tapi tetap powerful
+- Nggak pusing lagi soal data fetching
+- Ngurangin JS bloat di browser
+
+### Connect With Me:
+Instagram: [@novinbukannopin](https://instagram.com/novinbukannopin)
+LinkedIn: [novin](https://linkedin.com/in/novin-ardian-yulianto)
+
+---
+
