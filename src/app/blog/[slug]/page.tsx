@@ -50,6 +50,9 @@ export async function generateMetadata({
       description,
       images: [ogImage],
     },
+    alternates: {
+      canonical: `${DATA.url}/blog/${post.slug}`,
+    },
   };
 }
 
@@ -86,6 +89,7 @@ export default async function Blog({
             author: {
               '@type': 'Person',
               name: DATA.name,
+              image: 'https://novin.fun/me.webp',
             },
           }),
         }}
