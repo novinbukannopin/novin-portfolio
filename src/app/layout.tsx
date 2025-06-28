@@ -72,6 +72,7 @@ export default function RootLayout({
                 target: 'https://novin.fun/search?q={search_term_string}',
                 'query-input': 'required name=search_term_string',
               },
+              image: 'https://novin.fun/me.webp',
             }),
           }}
         />

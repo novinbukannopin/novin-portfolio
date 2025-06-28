@@ -48,6 +48,8 @@ export default function Blog({
                   alt={certif.title}
                   className='h-48 w-48 cursor-pointer rounded-md object-cover transition hover:brightness-75'
                   onClick={() => setSelectedImage(`/certifications/${image}`)}
+                  width={'100'}
+                  height={'100'}
                 />
               ))}
             </div>
@@ -67,10 +69,12 @@ export default function Blog({
                 >
                   ✕
                 </button>
-                <img
+                <Image
                   src={selectedImage}
                   alt='Selected'
                   className='mx-auto max-h-[80vh] rounded-md shadow-lg'
+                  width={720}
+                  height={1280}
                 />
               </div>
             </div>

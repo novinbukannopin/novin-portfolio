@@ -14,9 +14,9 @@ module.exports = {
       extends: [
         'next/core-web-vitals',
         'plugin:@typescript-eslint/recommended',
-        // 'plugin:@typescript-eslint/recommended-type-checked',
-        // 'plugin:@typescript-eslint/strict-type-checked',
-        // 'plugin:@typescript-eslint/stylistic-type-checked',
+        // 'plugin:@typescript-eslint/recommended-types-checked',
+        // 'plugin:@typescript-eslint/strict-types-checked',
+        // 'plugin:@typescript-eslint/stylistic-types-checked',
       ],
       rules: {
         '@typescript-eslint/no-explicit-any': 'off',

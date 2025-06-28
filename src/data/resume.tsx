@@ -1,6 +1,6 @@
 import { Icons } from '@/components/icons';
 import config from '@/lib/config';
-import { HomeIcon, NotebookIcon, ScrollText } from 'lucide-react';
+import { FolderGit2, HomeIcon, NotebookIcon, ScrollText } from 'lucide-react';
 
 export const DATA = {
   name: 'Novin Ardian Yulianto',
@@ -29,6 +29,7 @@ export const DATA = {
     { href: '/', icon: HomeIcon, label: 'Home' },
     { href: '/blog', icon: NotebookIcon, label: 'Blog' },
     { href: '/certification', icon: ScrollText, label: 'Certifications' },
+    { href: '/project', icon: FolderGit2, label: 'Projects' },
   ],
   contact: {
     email: 'hello@example.com',
