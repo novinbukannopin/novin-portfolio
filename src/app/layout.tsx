@@ -56,6 +56,56 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' suppressHydrationWarning>
+      <head>
+        {/* WebSite Structured Data */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              url: 'https://novin.fun/',
+              name: 'Novin Ardian Yulianto',
+              alternateName: 'novin.fun',
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: 'https://novin.fun/search?q={search_term_string}',
+                'query-input': 'required name=search_term_string',
+              },
+            }),
+          }}
+        />
+
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: 'https://novin.fun/',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'Blog',
+                  item: 'https://novin.fun/blog',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 3,
+                  name: 'Certifications',
+                  item: 'https://novin.fun/certification',
+                },
+              ],
+            }),
+          }}
+        />
+      </head>
       <body
         className={cn(
           'mx-auto min-h-screen max-w-2xl bg-background px-6 py-12 font-sans antialiased sm:py-24',
@@ -69,8 +119,8 @@ export default function RootLayout({
           </TooltipProvider>
         </ThemeProvider>
       </body>
-      <GoogleAnalytics gaId={'G-W1MDRB9NRR'} />
-      <GoogleTagManager gtmId={'G-W1MDRB9NRR'} />
+      <GoogleAnalytics gaId='G-W1MDRB9NRR' />
+      <GoogleTagManager gtmId='G-W1MDRB9NRR' />
     </html>
   );
 }
