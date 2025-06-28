@@ -54,11 +54,22 @@ export const DATA = {
         icon: Icons.instagram,
         navbar: true,
       },
-      email: {
+      X: {
+        name: 'X',
+        url: 'https://dub.sh/novin-x',
+        icon: Icons.x,
+        navbar: true,
+      },
+      Tiktok: {
+        name: 'Tiktok',
+        url: 'https://dub.sh/novin-tiktok',
+        icon: Icons.tiktok,
+        navbar: true,
+      },
+      Email: {
         name: 'Send Email',
         url: 'mailto:work.novinnn@gmail.com?subject=Hello Novin&body=I saw your portfolio and...',
         icon: Icons.email,
-
         navbar: true,
       },
     },

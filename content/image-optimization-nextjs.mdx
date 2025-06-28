@@ -1,0 +1,105 @@
+---
+title: 'Optimasi Gambar di Next.js Biar Website Makin Ngebut'
+publishedAt: '2025-06-29'
+summary: 'Panduan lengkap penggunaan Next.js Image Component untuk performa maksimal.'
+---
+
+# Optimasi Gambar di Next.js Biar Website Makin Ngebut
+
+Tahukah kamu?
+**Gambar adalah penyebab utama website jadi lambat.**
+
+Makanya Next.js punya komponen `<Image />` yang powerful banget buat optimasi.
+
+---
+
+## Kenapa Perlu Optimasi Gambar?
+
+- 🔻 **LCP (Largest Contentful Paint) turun**
+- 📉 Bandwidth lebih hemat
+- ⚡ Website lebih cepat dan SEO naik
+
+---
+
+## Fitur Utama `<Image />`
+
+✅ **Lazy Loading** otomatis
+✅ **Resize** sesuai device
+✅ **WebP Support** out of the box
+✅ **Placeholder Blur**
+
+---
+
+## Contoh Pemakaian `<Image />`
+
+### 1️⃣ Basic Usage
+
+```tsx
+import Image from 'next/image';
+
+<Image
+  src="/hero.jpg"
+  alt="Hero image"
+  width={1200}
+  height={600}
+/>
+```
+
+### 2️⃣ Placeholder Blur
+```tsx
+<Image
+  src="/banner.jpg"
+  alt="Banner utama"
+  width={1920}
+  height={600}
+  priority
+/>
+```
+
+### 3️⃣ Prioritas Loading
+
+Untuk gambar di atas lipatan (above the fold):
+```tsx
+<Image
+  src="/banner.jpg"
+  alt="Banner utama"
+  width={1920}
+  height={600}
+  priority
+/>
+```
+
+### 4️⃣ Responsive Layout
+```tsx
+<div className="relative w-full h-64">
+  <Image
+    src="/cover.jpg"
+    alt="Cover image"
+    fill
+    style={{ objectFit: 'cover' }}
+  />
+</div>
+```
+
+## Tips Tambahan
+- Gunakan format WebP bila memungkinkan.
+- Jangan upload gambar terlalu besar.
+- Cek LCP lewat PageSpeed Insights.
+
+## Penutup
+
+Kalau kamu pakai Next.js, jangan lagi pakai <img> untuk konten utama.
+Gunakan <Image /> supaya performa website kamu naik drastis.
+
+### Connect With Me:
+Instagram: [@novinbukannopin](https://dub.sh/novin-instagram)
+
+LinkedIn: [novin](https://dub.sh/novin-linkedin)
+
+Tiktok: [@lovinnnnnnnn](https://dub.sh/novin-tiktok)
+
+X/Twitter: [@novinbukannopin](https://dub.sh/novin-x)
+
+GitHub: [@novinbukannopin](https://dub.sh/novin-github)
+
+---

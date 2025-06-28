@@ -1,0 +1,80 @@
+---
+title: 'Aksesibilitas (A11Y) Web: Biar Semua Orang Bisa Akses Website Kamu'
+publishedAt: '2025-06-28'
+summary: 'Panduan dasar membuat website yang lebih inklusif dan aksesibel.'
+---
+
+# Aksesibilitas (A11Y) Web: Biar Semua Orang Bisa Akses Website Kamu
+
+Pernah kepikiran nggak, kalau website yang kamu buat ternyata susah diakses sebagian orang?
+Mulai dari pengguna screen reader, orang dengan low vision, sampai orang yang cuma pakai keyboard.
+
+Kalau kamu mau bikin web yang **inklusif**, kamu wajib paham A11Y (Accessibility).
+
+---
+
+## Kenapa Aksesibilitas Itu Penting?
+
+- 🌍 **1 dari 5 orang** di dunia mengalami disabilitas
+- 🌐 Web yang aksesibel = reach lebih luas
+- 🏆 Banyak regulasi legal yang mewajibkan A11Y (WCAG)
+
+---
+
+## Prinsip Dasar A11Y
+
+1. **Perceivable** – Informasi harus bisa ditangkap semua indera (misalnya, teks alternatif gambar).
+2. **Operable** – Semua fungsi harus bisa dioperasikan (misalnya via keyboard).
+3. **Understandable** – Konten harus jelas dan konsisten.
+4. **Robust** – Bisa dibaca assistive technology.
+
+---
+
+## Contoh Praktik A11Y di Next.js + Tailwind
+
+### 1️⃣ Kontras Warna yang Cukup
+
+```tsx
+<p className="text-foreground/80 dark:text-foreground/70">
+  Teks ini punya kontras yang lebih ramah mata.
+</p>
+```
+
+### 2️⃣ Teks Alternatif Gambar
+```tsx
+<Image
+  src="/banner.jpg"
+  alt="Banner promo diskon 50% untuk semua produk"
+/>
+```
+
+### 3️⃣ Navigasi Keyboard
+
+Tambahkan focus state di Tailwind:
+```tsx
+<a
+  href="/about"
+  className="underline focus:outline-none focus:ring focus:ring-primary"
+>
+  Tentang Kami
+</a>
+```
+
+
+## Penutup
+
+Aksesibilitas itu bukan cuma soal compliance.
+Ini tentang membuat web yang bisa dinikmati semua orang tanpa hambatan.
+
+### Connect With Me:
+Instagram: [@novinbukannopin](https://dub.sh/novin-instagram)
+
+LinkedIn: [novin](https://dub.sh/novin-linkedin)
+
+Tiktok: [@lovinnnnnnnn](https://dub.sh/novin-tiktok)
+
+X/Twitter: [@novinbukannopin](https://dub.sh/novin-x)
+
+GitHub: [@novinbukannopin](https://dub.sh/novin-github)
+
+---
