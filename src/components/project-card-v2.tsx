@@ -1,5 +1,6 @@
 import React from 'react';
 import { Project } from '@/types/project';
+import Image from 'next/image';
 
 interface ProjectCardProps {
   project: Project;
@@ -10,7 +11,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     <div className='overflow-hidden rounded-xl border border-gray-200 bg-white transition-all duration-300 hover:border-gray-300 hover:shadow-lg dark:border-gray-700 dark:bg-transparent dark:hover:border-gray-600 dark:hover:shadow-none'>
       {/* Image */}
       <div className='h-48 overflow-hidden'>
-        <img
+        <Image
           src={project.image}
           alt={project.title}
           className='h-full w-full object-cover transition-transform duration-500 hover:scale-105'

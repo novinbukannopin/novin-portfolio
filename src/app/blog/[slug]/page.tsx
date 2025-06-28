@@ -19,15 +19,24 @@ export async function generateMetadata({
 }): Promise<Metadata | undefined> {
   const post = await getPost(params.slug);
 
+  if (!post) {
+    return {
+      title: 'Post Not Found',
+      description: 'The requested post does not exist.',
+      robots: { index: false, follow: false },
+    };
+  }
+
   const {
     title,
     publishedAt: publishedTime,
     summary: description,
     image,
   } = post.metadata;
+
   const ogImage = image
     ? `${DATA.url}${image}`
-    : `${DATA.url}/og?title=${title}`;
+    : `${DATA.url}/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}&brandText=novin.fun`;
 
   return {
     title,
@@ -49,6 +58,9 @@ export async function generateMetadata({
       title,
       description,
       images: [ogImage],
+    },
+    alternates: {
+      canonical: `${DATA.url}/blog/${post.slug}`,
     },
   };
 }
@@ -86,6 +98,7 @@ export default async function Blog({
             author: {
               '@type': 'Person',
               name: DATA.name,
+              image: 'https://novin.fun/me.webp',
             },
           }),
         }}

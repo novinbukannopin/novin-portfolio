@@ -21,12 +21,28 @@ export const metadata: Metadata = {
   },
   description: DATA.description,
   openGraph: {
-    title: `${DATA.name}`,
+    title: DATA.name,
     description: DATA.description,
     url: DATA.url,
-    siteName: `${DATA.name}`,
+    siteName: DATA.name,
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: `${DATA.url}/api/og?title=${encodeURIComponent(DATA.name)}&description=${encodeURIComponent(DATA.description)}&brandText=novin.fun`,
+        width: 1200,
+        height: 630,
+        alt: DATA.name,
+      },
+    ],
+  },
+  twitter: {
+    title: DATA.name,
+    description: DATA.description,
+    card: 'summary_large_image',
+    images: [
+      `${DATA.url}/api/og?title=${encodeURIComponent(DATA.name)}&description=${encodeURIComponent(DATA.description)}&brandText=novin.fun`,
+    ],
   },
   robots: {
     index: true,
@@ -38,10 +54,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  twitter: {
-    title: `${DATA.name}`,
-    card: 'summary_large_image',
   },
   verification: {
     google: '',

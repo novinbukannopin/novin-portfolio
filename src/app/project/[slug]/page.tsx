@@ -3,6 +3,7 @@
 import React from 'react';
 import { notFound, useParams } from 'next/navigation';
 import { DATA } from '@/data/project';
+import Image from 'next/image';
 
 export default function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -21,7 +22,7 @@ export default function ProjectDetail() {
       <div className='mx-auto max-w-4xl py-12'>
         <div className='overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-gray-700 dark:bg-transparent'>
           <div className='h-64 overflow-hidden sm:h-80'>
-            <img
+            <Image
               src={project.image}
               alt={project.title}
               className='h-full w-full object-cover'
