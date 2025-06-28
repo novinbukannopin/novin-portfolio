@@ -1,10 +1,41 @@
 import BlurFade from '@/components/magicui/blur-fade';
 import Link from 'next/link';
 import { DATA } from '@/data/resume';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Certification',
-  description: 'My certifications and achievements.',
+export const metadata: Metadata = {
+  title: 'Certifications',
+  description: 'Daftar sertifikasi dan pencapaian Novin Ardian Yulianto.',
+  openGraph: {
+    title: 'Certifications - Novin Ardian Yulianto',
+    description: 'Daftar sertifikasi dan pencapaian profesional Novin.',
+    url: `${DATA.url}/certification`,
+    siteName: 'novin.fun',
+    type: 'website',
+    images: [
+      {
+        url: `${DATA.url}/api/og?title=Certifications&description=Daftar%20sertifikasi%20dan%20pencapaian%20Novin%20Ardian%20Yulianto&brandText=novin.fun`,
+        width: 1200,
+        height: 630,
+        alt: 'Certifications OG Image',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Certifications - Novin Ardian Yulianto',
+    description: 'Daftar sertifikasi profesional Novin.',
+    images: [
+      `${DATA.url}/api/og?title=Certifications&description=Daftar%20sertifikasi%20dan%20pencapaian%20Novin%20Ardian%20Yulianto&brandText=novin.fun`,
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: `${DATA.url}/certification`,
+  },
 };
 
 const BLUR_FADE_DELAY = 0.04;

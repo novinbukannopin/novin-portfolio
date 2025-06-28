@@ -7,40 +7,48 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }): Promise<Metadata> {
-  const certif = DATA.certifications.find(
-    (certif) => certif.slug === params.slug,
-  );
+  const certif = DATA.certifications.find((c) => c.slug === params.slug);
 
   if (!certif) {
     return {
       title: 'Certification Not Found',
-      description: 'Certification tidak ditemukan.',
+      description: 'Sertifikasi tidak ditemukan.',
+      robots: { index: false, follow: false },
     };
   }
 
   const ogImage =
     certif.image && certif.image.length > 0
       ? `${DATA.url}/certifications/${certif.image[0]}`
-      : `${DATA.url}/og?title=${encodeURIComponent(certif.title)}`;
+      : `${DATA.url}/api/og?title=${encodeURIComponent(certif.title)}&description=${encodeURIComponent(certif.subtitle || '')}&brandText=novin.fun`;
 
   return {
     title: certif.title,
-    description: certif.subtitle || 'Certification detail.',
+    description: certif.subtitle || 'Detail sertifikasi.',
     openGraph: {
       title: certif.title,
-      description: certif.subtitle || 'Certification detail.',
+      description: certif.subtitle || 'Detail sertifikasi.',
       url: `${DATA.url}/certification/${certif.slug}`,
+      siteName: 'novin.fun',
+      type: 'article',
       images: [{ url: ogImage }],
     },
     twitter: {
       card: 'summary_large_image',
       title: certif.title,
-      description: certif.subtitle || 'Certification detail.',
+      description: certif.subtitle || 'Detail sertifikasi.',
       images: [ogImage],
+    },
+    alternates: {
+      canonical: `${DATA.url}/certification/${certif.slug}`,
     },
   };
 }
 
-export default function Page({ params }: { params: { slug: string } }) {
+export default function CertificationSlugPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   return <CertificationDetail params={params} />;
 }

@@ -1,10 +1,45 @@
 import BlurFade from '@/components/magicui/blur-fade';
 import { getBlogPosts } from '@/data/blog';
 import Link from 'next/link';
+import { Metadata } from 'next';
+import { DATA } from '@/data/resume';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Blog',
-  description: 'My thoughts on software development, life, and more.',
+  description:
+    'Kumpulan tulisan tentang software development, life, dan insight lainnya.',
+  openGraph: {
+    title: 'Blog - Novin Ardian Yulianto',
+    description:
+      'Kumpulan tulisan tentang software development, life, dan insight lainnya.',
+    url: `${DATA.url}/blog`,
+    siteName: 'novin.fun',
+    type: 'website',
+    images: [
+      {
+        url: `${DATA.url}/api/og?title=Blog&description=Kumpulan%20tulisan%20tentang%20software%20development%20dan%20insight%20lainnya&brandText=novin.fun`,
+        width: 1200,
+        height: 630,
+        alt: 'Blog OG Image',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog - Novin Ardian Yulianto',
+    description:
+      'Kumpulan tulisan tentang software development, life, dan insight lainnya.',
+    images: [
+      `${DATA.url}/api/og?title=Blog&description=Kumpulan%20tulisan%20tentang%20software%20development%20dan%20insight%20lainnya&brandText=novin.fun`,
+    ],
+  },
+  alternates: {
+    canonical: `${DATA.url}/blog`,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const BLUR_FADE_DELAY = 0.04;
