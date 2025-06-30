@@ -5,16 +5,31 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Certifications',
-  description: 'Daftar sertifikasi dan pencapaian Novin Ardian Yulianto.',
+  description:
+    'Daftar sertifikasi dan pencapaian profesional Novin Ardian Yulianto.',
+  keywords: [
+    'Certifications',
+    'Sertifikasi',
+    'Pencapaian',
+    'Novin Ardian Yulianto',
+    'Fullstack Developer',
+    'Professional Certifications',
+  ],
+  authors: [{ name: 'Novin Ardian Yulianto', url: 'https://novin.fun' }],
+  alternates: {
+    canonical: `${DATA.url}/certification`,
+  },
   openGraph: {
-    title: 'Certifications - Novin Ardian Yulianto',
-    description: 'Daftar sertifikasi dan pencapaian profesional Novin.',
+    title: 'Certifications',
+    description:
+      'Daftar sertifikasi dan pencapaian profesional Novin Ardian Yulianto.',
     url: `${DATA.url}/certification`,
     siteName: 'novin.fun',
     type: 'website',
+    locale: 'en_US',
     images: [
       {
-        url: `${DATA.url}/api/og?title=Certifications&description=Daftar%20sertifikasi%20dan%20pencapaian%20Novin%20Ardian%20Yulianto&brandText=novin.fun`,
+        url: `${DATA.url}/api/og?title=${encodeURIComponent('Certifications')}&description=${encodeURIComponent('Daftar sertifikasi dan pencapaian profesional Novin Ardian Yulianto.')}&brandText=novin.fun`,
         width: 1200,
         height: 630,
         alt: 'Certifications OG Image',
@@ -23,18 +38,23 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Certifications - Novin Ardian Yulianto',
-    description: 'Daftar sertifikasi profesional Novin.',
+    title: 'Certifications',
+    description:
+      'Daftar sertifikasi dan pencapaian profesional Novin Ardian Yulianto.',
     images: [
-      `${DATA.url}/api/og?title=Certifications&description=Daftar%20sertifikasi%20dan%20pencapaian%20Novin%20Ardian%20Yulianto&brandText=novin.fun`,
+      `${DATA.url}/api/og?title=${encodeURIComponent('Certifications')}&description=${encodeURIComponent('Daftar sertifikasi dan pencapaian profesional Novin Ardian Yulianto.')}&brandText=novin.fun`,
     ],
   },
   robots: {
     index: true,
     follow: true,
-  },
-  alternates: {
-    canonical: `${DATA.url}/certification`,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
