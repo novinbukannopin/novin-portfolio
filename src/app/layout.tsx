@@ -15,9 +15,31 @@ const fontSans = FontSans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
+  authors: {
+    name: DATA.name,
+    url: DATA.url,
+  },
+  creator: DATA.name,
+  publisher: DATA.url,
+  abstract: DATA.description,
+  classification: 'Personal Website, Portfolio, Blog',
+  formatDetection: {
+    telephone: false,
+    address: false,
+    email: false,
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: DATA.name,
+  },
   title: {
     default: DATA.name,
     template: `%s | ${DATA.name}`,
+  },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-icon.png',
   },
   description: DATA.description,
   openGraph: {
@@ -35,6 +57,9 @@ export const metadata: Metadata = {
         alt: DATA.name,
       },
     ],
+  },
+  alternates: {
+    canonical: DATA.url,
   },
   twitter: {
     title: DATA.name,
@@ -59,6 +84,15 @@ export const metadata: Metadata = {
     google: '',
     yandex: '',
   },
+  keywords: [
+    'Novin Ardian Yulianto',
+    'Fullstack Developer',
+    'Personal Website',
+    'Portfolio',
+    'Project Manager',
+    'Software Engineer',
+    'Blog',
+  ],
 };
 
 export default function RootLayout({
@@ -69,7 +103,6 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <head>
-        {/* WebSite Structured Data */}
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
@@ -114,6 +147,27 @@ export default function RootLayout({
                   name: 'Certifications',
                   item: 'https://novin.fun/certification',
                 },
+              ],
+            }),
+          }}
+        />
+
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'Novin Ardian Yulianto',
+              url: 'https://novin.fun',
+              image: 'https://novin.fun/me.webp',
+              jobTitle: 'Fullstack Developer',
+              sameAs: [
+                'https://github.com/novinbukannopin',
+                'https://www.linkedin.com/in/novin-ardian-yulianto',
+                'https://www.tiktok.com/@novinnnnnnnn',
+                'https://x.com/novinbukannopin',
+                'https://www.instagram.com/novinbukannopin',
               ],
             }),
           }}

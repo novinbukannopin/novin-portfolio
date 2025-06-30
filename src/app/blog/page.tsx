@@ -8,16 +8,29 @@ export const metadata: Metadata = {
   title: 'Blog',
   description:
     'Kumpulan tulisan tentang software development, life, dan insight lainnya.',
+  keywords: [
+    'Blog',
+    'Software Development',
+    'Programming',
+    'Novin Ardian Yulianto',
+    'Fullstack Developer',
+    'Personal Website',
+  ],
+  authors: [{ name: 'Novin Ardian Yulianto', url: 'https://novin.fun' }],
+  alternates: {
+    canonical: `${DATA.url}/blog`,
+  },
   openGraph: {
-    title: 'Blog - Novin Ardian Yulianto',
+    title: 'Blog',
     description:
       'Kumpulan tulisan tentang software development, life, dan insight lainnya.',
     url: `${DATA.url}/blog`,
     siteName: 'novin.fun',
     type: 'website',
+    locale: 'en_US',
     images: [
       {
-        url: `${DATA.url}/api/og?title=Blog&description=Kumpulan%20tulisan%20tentang%20software%20development%20dan%20insight%20lainnya&brandText=novin.fun`,
+        url: `${DATA.url}/api/og?title=${encodeURIComponent('Blog')}&description=${encodeURIComponent('Kumpulan tulisan tentang software development, life, dan insight lainnya.')}&brandText=novin.fun`,
         width: 1200,
         height: 630,
         alt: 'Blog OG Image',
@@ -26,19 +39,23 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blog - Novin Ardian Yulianto',
+    title: 'Blog',
     description:
       'Kumpulan tulisan tentang software development, life, dan insight lainnya.',
     images: [
-      `${DATA.url}/api/og?title=Blog&description=Kumpulan%20tulisan%20tentang%20software%20development%20dan%20insight%20lainnya&brandText=novin.fun`,
+      `${DATA.url}/api/og?title=${encodeURIComponent('Blog')}&description=${encodeURIComponent('Kumpulan tulisan tentang software development, life, dan insight lainnya.')}&brandText=novin.fun`,
     ],
-  },
-  alternates: {
-    canonical: `${DATA.url}/blog`,
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
