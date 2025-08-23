@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://novin.fun/sitemap.xml',
+    sitemap: 'https://novin.fun/sitemaps/sitemap.xml',
   };
 }
