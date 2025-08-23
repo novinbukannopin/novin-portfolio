@@ -8,5 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       disallow: '/private/',
     },
     sitemap: 'https://novin.fun/sitemaps/sitemap.xml',
+    host: 'https://novin.fun',
   };
 }
