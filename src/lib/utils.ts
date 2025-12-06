@@ -35,3 +35,7 @@ export function formatDate(date: string) {
     return `${fullDate} (${yearsAgo}y ago)`;
   }
 }
+
+export const formatDateISO8601 = (date: string) => {
+  return new Date(date).toISOString().split('T')[0];
+};
